@@ -68,6 +68,8 @@ public class stage_3 extends JFrame {
 		exitButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
+				Music buttonMusic = new Music("mouse.mp3", false);
+				buttonMusic.start();
 				exitButton.setIcon(exitButton_hover);
 				exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			}
@@ -90,6 +92,8 @@ public class stage_3 extends JFrame {
 		endingButton.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
+				Music buttonMusic = new Music("mouse.mp3", false);
+				buttonMusic.start();
 				exitButton.setCursor(new Cursor(Cursor.HAND_CURSOR));
 			}
 			@Override
@@ -121,7 +125,9 @@ public class stage_3 extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				//Į ��ư �̺�Ʈ ó��
-				introMusic.stop();
+				Music buttonMusic = new Music("mouse.mp3", false);
+				buttonMusic.start();
+				introMusic.close();
 				endingMusichappy.start();
 				hbb_merong.setBounds(300, 300, 128, 128);
 				add(hbb_merong);		//Į ��ư Ŭ��������, ȣ���� ����
@@ -155,7 +161,9 @@ public class stage_3 extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				//�Ӵ� ���� ��ư �̺�Ʈ ó��
-				introMusic.stop();
+				Music buttonMusic = new Music("mouse.mp3", false);
+				buttonMusic.start();
+				introMusic.close();
 				endingMusicgameover.start();
 				boss.setBounds(320, 185, 128, 128);
 				add(boss);		//�Ӵ� ��ư ����������, ������ ����
@@ -187,6 +195,8 @@ public class stage_3 extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				//right ��ư �̺�Ʈ ó��
+				Music buttonMusic = new Music("mouse.mp3", false);
+				buttonMusic.start();
 				background = new ImageIcon(Main.class.getClassLoader().getResource("images/BG 1.jpg")).getImage();		//��� ��ü
 				swordButton.setVisible(false);
 				moneyButton.setVisible(false);
@@ -213,6 +223,8 @@ public class stage_3 extends JFrame {
 			@Override
 			public void mousePressed(MouseEvent e) {
 				//left ��ư �̺�Ʈ ó��
+				Music buttonMusic = new Music("mouse.mp3", false);
+				buttonMusic.start();
 				background = new ImageIcon(Main.class.getClassLoader().getResource("images/BG 2.jpg")).getImage();		//��� ��ü
 				swordButton.setVisible(false);
 				moneyButton.setVisible(false);
