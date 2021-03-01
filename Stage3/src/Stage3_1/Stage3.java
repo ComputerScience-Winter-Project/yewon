@@ -69,13 +69,13 @@ public class Stage3 extends JFrame {
 	private JLabel ssung = new JLabel(new ImageIcon(Main.class.getClassLoader().getResource("images/슝슝이.png")));
 	private JLabel guard = new JLabel(guard_basic);
 
-	private JButton exitButton = new JButton(exitButtonBasicImage);
-	private JButton moneyButton = new JButton(moneyButton_Basic);
-	private JButton swordButton = new JButton(swordButton_Basic);
-	private JButton nextButton = new JButton(nextButtonBasicImage);
-	private JButton swordFightButton = new JButton(swordFightBasicImage);
-	private JButton swordRunButton = new JButton(swordRunBasicImage);
-	private JButton endingButton = new JButton(endingButtonImage);
+	private JButton exitButton = new JButton(exitButtonBasicImage);  // 상단 우측 X 버튼
+	private JButton moneyButton = new JButton(moneyButton_Basic);  // 돈과 칼 선택지 중 돈
+	private JButton swordButton = new JButton(swordButton_Basic);  // 돈과 칼 선택지 중 칼
+	private JButton nextButton = new JButton(nextButtonBasicImage);  // next 버튼
+	private JButton swordFightButton = new JButton(swordFightBasicImage);  // 칼 스토리 중 경비 이벤트 선택지
+	private JButton swordRunButton = new JButton(swordRunBasicImage);  // 칼 스토리 중 경비 이벤트 선택지
+	private JButton endingButton = new JButton(endingButtonImage);  // 하단 우측 나가기 버튼
 
 	private boolean guardEvent = false;
 
@@ -328,7 +328,7 @@ public class Stage3 extends JFrame {
 		hobbang.setVisible(true);
 	}
 
-	public void guardEvent(int choice) {
+	public void guardEvent(int choice) {  // 경비 근처로 다가가면 실행됨
 		if (choice == 1) {
 			hobbang.setVisible(false);
 			add(hobbangFix);
@@ -346,7 +346,7 @@ public class Stage3 extends JFrame {
 		}
 	}
 
-	public void start() {
+	public void start() {  // 호빵이 움직이기 + 칼과 돈 선택지 이후 설정
 		Container c = getContentPane();
 		c.setLayout(null);
 		hobbang.setBounds(x, y, 128, 128);
